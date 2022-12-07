@@ -1,6 +1,6 @@
 let pokemonName
 const pokemonNameInput = document.getElementById('name')
-const pokemonContainer = document.querySelector('.pokemon')
+const pokemonContainer = document.querySelector('.pokemonDetail')
 
 pokemonNameInput.addEventListener('change', (event) => {
 	pokemonName = event.target.value
@@ -33,7 +33,7 @@ function getPokemon (number) {
 				if (result) {
 					const types = result.types.map(type => type.type.name)
 					pokemonContainer.innerHTML = `
-					<img src=${result.sprites.front_default}>
+					<img src=${result.sprites.front_default} width=180>
 					<p>${result.name}</p>
 					<p>${types}</p>
 					`
